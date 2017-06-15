@@ -1,0 +1,18 @@
+
+
+  <div class="vehicle_section panel panel-default col-sm-4">
+    <h3>LIST OF VEHICLES</H3>
+  {{#each model as |vehicle|}}
+  <div class="col-4 panel-body">
+  <p>{{vehicle.type}}</p>
+  {{#if vehicle.details}}
+  {{#link-to 'vehicles.list' vehicle.type}}
+  <span class="caption fa fa-angle-double-right" aria-hidden="true">>>More Details</span>
+  {{/link-to}}
+  {{/if}}
+</div>
+{{/each}}
+</div>
+<div>
+{{outlet}}
+</div>

@@ -1,0 +1,19 @@
+
+<div class="list_section panel panel-default col-sm-4">
+  {{my-dropdown action="toggleTransition"}}
+{{#each model as |type|}}
+<div class="panel-body">
+<h4>Manufacturer:{{type.manufacturer}}</h4>
+<p>Since : {{type.founded}}</p>
+<p>Review:{{type.review}}</p>
+{{#if type.details}}
+{{#link-to 'vehicles.list.detail' type.manufacturer}}
+<span>More details</span>
+{{/link-to}}
+{{/if}}
+</div>
+{{/each}}
+</div>
+<div class="green">
+{{outlet}}
+</div>

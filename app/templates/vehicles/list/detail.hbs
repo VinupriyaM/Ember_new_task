@@ -1,0 +1,12 @@
+<!-- {{my-dropdown}} -->
+<div class="car_section panel panel-default col-sm-4">
+{{my-dropdown-two}}
+{{#each model as |todo|}}
+<div class="panel-body">
+  <h4>Name of the car: {{todo.name}}</h4>
+  <p>This is a {{todo.class}} car</p>
+  <p>Price {{todo.price}}</p>
+</div>
+{{/each}}
+</div>
+{{outlet}}
