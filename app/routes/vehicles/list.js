@@ -42,7 +42,15 @@ let list = [{
         }]
 
 export default Ember.Route.extend({
-model() {
-  return list;
+model(params) {
+  let result;
+  let parentModel = this.modelFor('vehicles');
+  parentModel.forEach(function(obj){
+    if(obj.type==params.list_type){
+      result=list;
+    }
+  });
+  return result;
+
 }
 });
